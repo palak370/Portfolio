@@ -11,7 +11,7 @@ export default function Home() {
       icon: <User size={20} style={{ color: 'var(--accent-gold)' }} />,
       to: '/about',
       btnText: 'Read Biography',
-      image: '/images/about_teaser.png',
+      image: '/images/about_teaser.jpg',
     },
     {
       title: 'Litigation & Notice Assistant',
@@ -20,7 +20,7 @@ export default function Home() {
       icon: <ShieldAlert size={20} style={{ color: 'var(--accent-gold)' }} />,
       to: '/services',
       btnText: 'Explore Services & Tools',
-      image: '/images/gst_reply_to_notices.png',
+      image: '/images/gst_reply_to_notices.jpg',
     },
     {
       title: 'Contact & Consultations',
@@ -29,7 +29,7 @@ export default function Home() {
       icon: <Mail size={20} style={{ color: 'var(--accent-gold)' }} />,
       to: '/contact',
       btnText: 'Schedule Consultation',
-      image: '/images/contact_teaser.png',
+      image: '/images/contact_teaser.jpg',
     },
     {
       title: 'Media Gallery & Testimonials',
@@ -38,7 +38,7 @@ export default function Home() {
       icon: <Image size={20} style={{ color: 'var(--accent-gold)' }} />,
       to: '/gallery',
       btnText: 'Browse Gallery',
-      image: '/images/gallery_teaser.png',
+      image: '/images/gallery_teaser.jpg',
     },
   ];
 

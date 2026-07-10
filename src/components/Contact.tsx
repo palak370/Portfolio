@@ -1,6 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 
+/* Verified chamber location — the red-roof house (not the generic
+   "Housing Board Colony" address string). Used by both the map embed
+   and the Open in Maps destination. */
+const OFFICE_LAT = 25.640452;
+const OFFICE_LNG = 78.460805;
+
 interface ContactProps {
   prefilledSubject?: string;
   prefilledMessage?: string;
@@ -58,7 +64,6 @@ export default function Contact({ prefilledSubject, prefilledMessage }: ContactP
     } else {
       setErrors({});
       setSubmitted(true);
-      console.log('Consultation requested:', formData);
     }
   };
 
@@ -76,7 +81,7 @@ export default function Contact({ prefilledSubject, prefilledMessage }: ContactP
   return (
     <section id="contact" className="section-padding" style={{ 
       position: 'relative',
-      background: 'linear-gradient(rgba(251, 250, 247, 0.92), rgba(251, 250, 247, 0.96)), url("/images/bg_contact.png")', 
+      background: 'linear-gradient(rgba(251, 250, 247, 0.92), rgba(251, 250, 247, 0.96)), url("/images/bg_contact.jpg")', 
       backgroundSize: 'cover',
       backgroundPosition: 'center'
     }}>
@@ -165,9 +170,13 @@ export default function Contact({ prefilledSubject, prefilledMessage }: ContactP
                 position: 'relative'
               }}
             >
+              {/* Pin on the exact chamber building (verified coordinates, red-roof
+                  house). Hybrid satellite view at high zoom so visitors recognise
+                  the building itself — the office has no Business Profile yet, so
+                  nearby labels may still read "Housing Board Colony". */}
               <iframe
                 title="Advocate Shailendra Yadav Chamber Office Location Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.5922339572455!2d78.4616239757657!3d25.618491877443916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397705492d52f6b1%3A0xe54cb8ecb9745e14!2sJhansi%20Rd%2C%20Datia%2C%20Madhya%20Pradesh%20475661!5e0!3m2!1sen!2sin!4v1720436900000!5m2!1sen!2sin"
+                src={`https://maps.google.com/maps?q=${OFFICE_LAT},${OFFICE_LNG}&z=19&t=h&output=embed`}
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -176,6 +185,26 @@ export default function Contact({ prefilledSubject, prefilledMessage }: ContactP
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
+
+            {/* Coordinate-based destination — not the colony address string */}
+            <a
+              href={`https://www.google.com/maps/search/?api=1&query=${OFFICE_LAT},${OFFICE_LNG}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary"
+              style={{
+                marginTop: '0.9rem',
+                width: '100%',
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '0.5rem',
+                fontSize: '0.85rem',
+              }}
+            >
+              <MapPin size={16} />
+              Open in Maps
+            </a>
           </div>
 
           {/* Right Column: Interactive Consultation Form */}

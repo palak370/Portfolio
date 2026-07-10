@@ -6,32 +6,32 @@ export default function Services() {
       icon: <ClipboardCheck size={20} style={{ color: 'var(--accent-gold)' }} />,
       title: 'GST Registration',
       description: 'End-to-end guidance for obtaining fresh registrations, amending existing profiles, and cancellation/revocation of registration. Special emphasis on corporate categorization and structured business onboarding.',
-      image: '/images/gst_registration.png',
+      image: '/images/gst_registration.jpg',
     },
     {
       icon: <FileSpreadsheet size={20} style={{ color: 'var(--accent-gold)' }} />,
       title: 'GST Return Filing',
       description: 'Precise preparation and filing of monthly, quarterly, and annual GST returns (GSTR-1, GSTR-3B, GSTR-9/9C Reconciliation). Comprehensive Input Tax Credit (ITC) reconciliation to prevent tax leakage and interest penalties.',
-      image: '/images/gst_return_filing.png',
+      image: '/images/gst_return_filing.jpg',
     },
     {
       icon: <ShieldAlert size={20} style={{ color: 'var(--accent-gold)' }} />,
       title: 'GST Reply to Notices',
       description: 'Professional drafting of technical replies against Show Cause Notices (SCN), returns scrutiny under Section 61, mismatch notices (2A/2B vs 3B), and enforcement/inspection summons. Sound defense to block arbitrary demands.',
-      image: '/images/gst_reply_to_notices.png',
+      image: '/images/gst_reply_to_notices.jpg',
     },
     {
       icon: <Landmark size={20} style={{ color: 'var(--accent-gold)' }} />,
       title: "GST Appeals (HC & GSTAT)",
       description: 'Litigating disputes through all levels of appellate authorities. Expert drafting and oral arguments before First Appellate Authorities, GSTAT (GST Appellate Tribunal), and Writ Petitions before the High Courts.',
-      image: '/images/gst_appeals.png',
+      image: '/images/gst_appeals.jpg',
     },
   ];
 
   return (
     <section id="services" className="section-padding" style={{ 
       position: 'relative',
-      background: 'linear-gradient(rgba(251, 250, 247, 0.92), rgba(251, 250, 247, 0.96)), url("/images/bg_services.png")', 
+      background: 'linear-gradient(rgba(251, 250, 247, 0.92), rgba(251, 250, 247, 0.96)), url("/images/bg_services.jpg")', 
       backgroundSize: 'cover',
       backgroundPosition: 'center'
     }}>

@@ -1,37 +1,18 @@
-import { useState, useEffect } from 'react';
 import { Scale, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import PhotoStack from './PhotoStack';
 
 export default function About() {
-  const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
-  const [positions, setPositions] = useState([0, 1, 2]);
-
-  useEffect(() => {
-    if (hoveredIdx !== null) return; // Pause auto-scroll on hover
-
-    const timer = setInterval(() => {
-      setPositions((prev) => prev.map((p) => (p + 1) % 3));
-    }, 3000); // Rotate every 3 seconds
-
-    return () => clearInterval(timer);
-  }, [hoveredIdx]);
-
   const credentials = [
     { title: 'Bachelor of Commerce (B.Com)', description: 'Providing a robust understanding of corporate finance, trade structures, and accounting systems.' },
     { title: 'Bachelor of Laws (LLB)', description: 'Empowering professional representation, legal strategy, and trial arguments in courtrooms.' },
     { title: '17+ Years Professional Experience', description: 'Over a decade and a half of handling direct and indirect tax matters for businesses of all scales.' }
   ];
 
-  const aboutImages = [
-    { src: '/images/image copy 12.png', alt: 'Law Library Cabinets' },
-    { src: '/images/image copy 16.png', alt: 'Advocate Yadav Profile' },
-    { src: '/images/image copy 4.png', alt: 'Tax Reference Library' }
-  ];
-
   return (
     <section id="about" className="section-padding" style={{ 
       position: 'relative', 
-      background: 'linear-gradient(rgba(251, 250, 247, 0.92), rgba(251, 250, 247, 0.96)), url("/images/bg_about.png")', 
+      background: 'linear-gradient(rgba(251, 250, 247, 0.92), rgba(251, 250, 247, 0.96)), url("/images/bg_about.jpg")', 
       backgroundSize: 'cover',
       backgroundPosition: 'center'
     }}>
@@ -91,34 +72,8 @@ export default function About() {
               <Scale size={240} />
             </div>
 
-            {/* Library Overlapping Images Showcase */}
-            <div className="about-image-container" style={{ width: '100%', height: '300px', position: 'relative', marginBottom: '1.5rem' }}>
-              {aboutImages.map((img, idx) => {
-                const pos = positions[idx];
-                const isHovered = hoveredIdx === idx;
-                
-                const baseZ = pos + 1;
-                const zIndex = isHovered ? 10 : baseZ;
-                const transform = isHovered ? 'scale(1.08) translateY(-8px)' : 'scale(1) translateY(0)';
-                const boxShadow = isHovered ? '0 15px 35px rgba(0, 0, 0, 0.5), var(--glow-gold)' : '0 5px 15px rgba(0, 0, 0, 0.3)';
-
-                return (
-                  <img
-                    key={idx}
-                    src={img.src}
-                    alt={img.alt}
-                    onMouseEnter={() => setHoveredIdx(idx)}
-                    onMouseLeave={() => setHoveredIdx(null)}
-                    style={{
-                      boxShadow,
-                      zIndex,
-                      transform,
-                    }}
-                    className={`about-img-card about-img-${pos}`}
-                  />
-                );
-              })}
-            </div>
+            {/* Scroll-driven photo stack — prints landing on the desk */}
+            <PhotoStack />
 
             <h3 style={{ fontSize: '1.6rem', color: 'var(--text-primary)', borderBottom: '1px solid rgba(var(--accent-gold-rgb), 0.1)', paddingBottom: '0.75rem', zIndex: 3 }}>
               Core Philosophy
@@ -151,54 +106,6 @@ export default function About() {
         </div>
       </div>
 
-      <style>{`
-        .about-img-card {
-          position: absolute;
-          object-fit: cover;
-          border-radius: var(--border-radius);
-          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        
-        .about-img-0 {
-          top: 0px;
-          left: 0px;
-          width: 60%;
-          height: 170px;
-        }
-        
-        .about-img-1 {
-          top: 45px;
-          left: 20%;
-          width: 60%;
-          height: 170px;
-          border: 1.5px solid var(--accent-gold);
-        }
-        
-        .about-img-2 {
-          bottom: 0px;
-          right: 0px;
-          width: 60%;
-          height: 170px;
-          border: 1.5px solid var(--accent-gold);
-        }
-
-        @media (max-width: 576px) {
-          .about-image-container {
-            width: 100% !important;
-            height: 240px !important;
-            max-width: 300px !important;
-            margin: 0 auto 1.5rem auto !important;
-          }
-          
-          .about-img-card {
-            height: 140px !important;
-          }
-          
-          .about-img-1 {
-            top: 35px !important;
-          }
-        }
-      `}</style>
     </section>
   );
 }

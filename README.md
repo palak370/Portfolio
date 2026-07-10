@@ -1,32 +1,39 @@
-# React + TypeScript + Vite
+# Adv. Shailendra Yadav — GST Litigation & Tax Consultant
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Portfolio website for Advocate Shailendra Yadav, a GST litigation and tax
+consultant practising since 2009, representing clients across 8+ Indian states
+before Departmental Authorities, High Courts and the GST Appellate Tribunal
+(GSTAT).
 
-Currently, two official plugins are available:
+## Highlights
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Interactive 3D portfolio book** in the hero — a CSS-3D hardcover with a
+  full-bleed portrait cover, four photo pages and a branded back cover; click
+  the right/left halves to turn pages.
+- **GST Notice Assistant** — visitors pick their notice type (ITC mismatch,
+  ASMT-10 scrutiny, blocked credit, audit/summons), see the risk and suggested
+  defence, and can pre-fill the consultation form in one click.
+- **Scroll-driven photo stack** on the About page — photographs land on a pile
+  as you scroll; clicking the top print cycles it beneath the stack.
+- Media gallery with lightbox, client testimonials, career timeline, and a
+  contact page with a pinned map of the chamber office in Datia (M.P.).
 
-## React Compiler
+## Tech stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [React 19](https://react.dev) + [TypeScript](https://www.typescriptlang.org)
+- [Vite 8](https://vite.dev) with [oxlint](https://oxc.rs) for linting
+- [React Router 7](https://reactrouter.com)
+- [lucide-react](https://lucide.dev) icons
+- Hand-rolled CSS design system (no framework) — gold/ivory legal aesthetic
 
-## Expanding the Oxlint configuration
+## Development
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev       # start dev server on :5173
+npm run lint      # oxlint
+npm run build     # typecheck + production build to dist/
+npm run preview   # serve the production build on :4173
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+All imagery lives in `public/images/` (web-optimized JPEG/PNG).
