@@ -41,7 +41,7 @@ const LEAVES: Leaf[] = [
   { kind: 'front' },
   { kind: 'page', src: '/images/book/page1.jpg', alt: 'Adv. Shailendra Yadav addressing a panel session' },
   { kind: 'page', src: '/images/book/page2.jpg', alt: 'Adv. Shailendra Yadav greeting a senior dignitary' },
-  { kind: 'page', src: '/images/book/page3.jpg', alt: 'Felicitation with a senior member of the tax bar' },
+  { kind: 'page', src: '/images/book/page3.jpg', alt: 'Portrait of Adv. Shailendra Yadav at a tax bar felicitation' },
   { kind: 'page', src: '/images/book/page4.jpg', alt: 'Adv. Shailendra Yadav speaking at a litigation seminar' },
 ];
 
