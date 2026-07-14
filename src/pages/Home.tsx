@@ -7,7 +7,7 @@ export default function Home() {
     {
       title: 'Biography & Milestones',
       subtitle: 'About Advocate Yadav',
-      description: 'Discover the 17+ year legal journey of Shailendra Yadav, specialized in High Court and GST Appellate litigation.',
+      description: 'Discover the 24+ year legal journey of Shailendra Yadav, specialized in High Court and GST Appellate litigation.',
       icon: <User size={20} style={{ color: 'var(--accent-gold)' }} />,
       to: '/about',
       btnText: 'Read Biography',
@@ -296,7 +296,7 @@ export default function Home() {
               Require Immediate GST Consultation?
             </h3>
             <p style={{ color: 'var(--text-secondary)', maxWidth: '650px', marginBottom: '2rem', lineHeight: 1.6 }}>
-              Submit details of your pending GST mismatch notice, litigation summon, or appeal request. Our firm provides comprehensive legal evaluations within 24 hours.
+              Submit details of your pending GST mismatch notice, litigation summon, or appeal request. Our firm provides comprehensive legal evaluations as soon as possible.
             </p>
             <Link to="/contact" className="btn btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem' }}>
               <Mail size={16} />

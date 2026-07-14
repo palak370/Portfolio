@@ -14,7 +14,7 @@ export default function Timeline() {
 
   const events: TimelineEvent[] = [
     {
-      year: '2009',
+      year: '2002',
       title: 'Tax Consultation Launch',
       description: 'Launched private tax consultancy in Datia, MP. Advised local businesses, retail networks, and partnerships on direct tax, accounting setup, and audit requirements.',
       icon: <Briefcase size={18} />,
@@ -34,7 +34,7 @@ export default function Timeline() {
     {
       year: '2021 - Present',
       title: 'Appellate & Multi-State Practice',
-      description: 'Representing key clients before first appellate authorities, High Courts, and preparing briefs for GSTAT across 8+ states including Delhi, Maharashtra, UP, and Rajasthan.',
+      description: 'Representing key clients before first appellate authorities, High Courts, and preparing briefs for GSTAT across India including Delhi, Maharashtra, UP, and Rajasthan.',
       icon: <Landmark size={18} />,
     },
   ];
@@ -75,7 +75,7 @@ export default function Timeline() {
         {/* Section Header */}
         <div className="section-header">
           <span className="section-subtitle">Milestones</span>
-          <h2 className="section-title">17 Years of Legal Practice</h2>
+          <h2 className="section-title">24 Years of Legal Practice</h2>
           <p style={{ color: 'var(--text-muted)', marginTop: '1rem', fontSize: '1.05rem' }}>
             A track record of adapting, specializing, and delivering results in corporate taxation.
           </p>

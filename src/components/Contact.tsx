@@ -92,7 +92,7 @@ export default function Contact({ prefilledSubject, prefilledMessage }: ContactP
           <span className="section-subtitle">Consultation</span>
           <h2 className="section-title">Schedule a Legal Evaluation</h2>
           <p style={{ color: 'var(--text-muted)', marginTop: '1rem', fontSize: '1.05rem' }}>
-            Submit your tax query or notice details. Advocate Shailendra Yadav will evaluate and respond within 24 hours.
+            Submit your tax query or notice details. Advocate Shailendra Yadav will evaluate and respond as soon as possible.
           </p>
         </div>
 
@@ -289,11 +289,15 @@ export default function Contact({ prefilledSubject, prefilledMessage }: ContactP
                       cursor: 'pointer',
                     }}
                   >
+                    <option value="GST Notices and Replies">GST Notices and Replies</option>
+                    <option value="GST Appeals (Appellate authority & GSTAT)">GST Appeals (Appellate authority & GSTAT)</option>
                     <option value="GST Registration">GST Registration Inquiry</option>
                     <option value="GST Return Filing">GST Return Filing & Reconciliation</option>
-                    <option value="GST Reply to Notice">GST Reply against Departmental Notices</option>
-                    <option value="GST Appeals (HC/GSTAT)">GST Appeals (High Court & GSTAT)</option>
+                    <option value="GST audit cases">GST audit cases</option>
+                    <option value="GST Scrutiny">GST Scrutiny</option>
+                    <option value="Vehicle detention (under section 68) cases">Vehicle detention (under section 68) cases</option>
                     <option value="General Tax Consultation">General Tax & Corporate Consultation</option>
+                    <option value="Others / More Services">Others / More Services</option>
                   </select>
                 </div>
 

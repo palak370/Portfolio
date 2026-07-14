@@ -6,7 +6,7 @@ export default function About() {
   const credentials = [
     { title: 'Bachelor of Commerce (B.Com)', description: 'Providing a robust understanding of corporate finance, trade structures, and accounting systems.' },
     { title: 'Bachelor of Laws (LLB)', description: 'Empowering professional representation, legal strategy, and trial arguments in courtrooms.' },
-    { title: '17+ Years Professional Experience', description: 'Over a decade and a half of handling direct and indirect tax matters for businesses of all scales.' }
+    { title: '24+ Years Professional Experience', description: 'Over two decades of handling direct and indirect tax matters for businesses of all scales.' }
   ];
 
   return (
@@ -27,7 +27,7 @@ export default function About() {
               Tax Advocate & GST Litigator
             </h2>
             <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', fontSize: '1.05rem', lineHeight: 1.7 }}>
-              I am <strong>Shailendra Yadav</strong>, Advocate. For the past 17 years, I have practiced as a dedicated Tax Consultant throughout the State of Madhya Pradesh.
+              I am <strong>Shailendra Yadav</strong>, Advocate. For the past 24 years, I have practiced as a dedicated Tax Consultant throughout the State of Madhya Pradesh.
             </p>
             <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '1.05rem', lineHeight: 1.7 }}>
               Following the historic introduction of the Goods and Services Tax (GST) in 2017, I chose to specialize in the complex and evolving field of <strong>GST Litigation</strong>. This hyper-specialization has allowed me to represent clients facing high-value disputes and notices, representing them not only across Madhya Pradesh but in several other major commercial states—including Delhi, Uttar Pradesh, Maharashtra, Rajasthan, Punjab, and Telangana.
@@ -85,8 +85,8 @@ export default function About() {
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', zIndex: 3 }}>
               {[
-                '17+ Years of Direct and Indirect Tax Experience',
-                'Nationwide Litigation Presence (8+ States)',
+                '24+ Years of Direct and Indirect Tax Experience',
+                'Nationwide Litigation Presence (Across India)',
                 'Dual Expertise: Finance (B.Com) + Law (LLB)',
                 'Expertise before High Courts & GSTAT Appeals'
               ].map((text, idx) => (

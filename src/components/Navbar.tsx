@@ -53,7 +53,7 @@ export default function Navbar() {
                 Adv. Shailendra Yadav
               </span>
               <span className="nav-logo-sub" style={{ fontSize: '0.65rem', textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--accent-gold)', fontWeight: 600 }}>
-                GST Litigation & Tax Consultant
+                TAX CONSULTANT & GST LITIGATION EXPERT
               </span>
             </div>
           </Link>

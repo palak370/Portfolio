@@ -66,7 +66,7 @@ function TitlePage() {
       <img src={LOGO} alt="Adv. Shailendra Yadav emblem" className="bk-title__logo" />
       <span className="bk-title__rule" />
       <h3 className="bk-title__name">Adv. Shailendra Yadav</h3>
-      <span className="bk-title__sub">GST Litigation &amp; Tax Consultant</span>
+      <span className="bk-title__sub">TAX CONSULTANT &amp; GST LITIGATION EXPERT</span>
       <span className="bk-title__meta">A Professional Portfolio</span>
     </div>
   );
@@ -85,10 +85,10 @@ function FrontCover() {
       <span className="bk-cover__grad" />
       <img src={LOGO} alt="Adv. Shailendra Yadav emblem" className="bk-cover__logo" />
       <div className="bk-cover__text">
-        <span className="bk-cover__kicker">Advocate&nbsp;·&nbsp;Since&nbsp;2009</span>
+        <span className="bk-cover__kicker">Advocate&nbsp;·&nbsp;Since&nbsp;2002</span>
         <h3 className="bk-cover__name">Adv. Shailendra<br />Yadav</h3>
         <span className="bk-cover__rule" />
-        <span className="bk-cover__subtitle">GST Litigation &amp; Tax Consultant</span>
+        <span className="bk-cover__subtitle">TAX CONSULTANT &amp; GST LITIGATION EXPERT</span>
       </div>
     </div>
   );
@@ -102,8 +102,8 @@ function BackCover() {
         <img src={LOGO} alt="Adv. Shailendra Yadav emblem" className="bk-back__logo" />
         <span className="bk-cover__rule" style={{ margin: '0 auto' }} />
         <p className="bk-back__blurb">
-          Seventeen years of decisive GST litigation and tax counsel — representing clients
-          across 8+ states before Departmental Authorities, High Courts and the GST Appellate Tribunal.
+          Twenty-four years of decisive GST litigation and tax counsel — representing clients
+          across India before Departmental Authorities, High Courts and the GST Appellate Tribunal.
         </p>
       </div>
       <div className="bk-back__footer">

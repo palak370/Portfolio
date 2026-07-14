@@ -20,13 +20,8 @@ function ScrollToTop() {
 }
 
 export default function App() {
-  const [prefilledSubject, setPrefilledSubject] = useState<string>('');
-  const [prefilledMessage, setPrefilledMessage] = useState<string>('');
 
-  const handleSelectNotice = (subject: string, message: string) => {
-    setPrefilledSubject(subject);
-    setPrefilledMessage(message);
-  };
+
 
   const [footerOpen, setFooterOpen] = useState({
     links: false,
@@ -51,9 +46,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/services" element={<ServicesPage onSelectNotice={handleSelectNotice} />} />
+        <Route path="/services" element={<ServicesPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
-        <Route path="/contact" element={<ContactPage prefilledSubject={prefilledSubject} prefilledMessage={prefilledMessage} />} />
+        <Route path="/contact" element={<ContactPage prefilledSubject="" prefilledMessage="" />} />
       </Routes>
 
       {/* Premium Footer */}
@@ -101,12 +96,12 @@ export default function App() {
                     Adv. Shailendra Yadav
                   </span>
                   <span style={{ fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--accent-gold)', fontWeight: 600 }}>
-                    GST Litigation & Tax
+                    TAX CONSULTANT & GST LITIGATION EXPERT
                   </span>
                 </div>
               </div>
               <p style={{ fontSize: '0.9rem', color: 'var(--footer-text-muted)', lineHeight: 1.6, maxWidth: '280px' }}>
-                Providing corporate, commercial, and private clients with expert tax litigation counsel and representation across 8+ states.
+                Providing corporate, commercial, and private clients with expert tax litigation counsel and representation across India.
               </p>
             </div>
 

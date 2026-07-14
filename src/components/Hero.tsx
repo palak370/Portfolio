@@ -74,7 +74,7 @@ export default function Hero() {
               }}
             >
               <Award size={16} />
-              17+ Years of Practice as Tax Consultant
+              24+ Years of Practice as Tax Consultant
             </div>
 
             {/* Main Title */}
@@ -116,7 +116,7 @@ export default function Hero() {
                 maxWidth: '560px',
               }}
             >
-              With over <strong>17+ years of tax practice experience</strong> (since 2009) and dual qualifications in Commerce and Law (<strong>B.Com, LLB</strong>), I provide dedicated representation in complex <strong>GST litigation, audits, and GSTAT appeals</strong>. I represent corporate, commercial, and private clients across <strong>8+ states</strong>—including MP, Delhi, Maharashtra, UP, and Rajasthan—before Departmental Authorities, High Courts, and the GST Appellate Tribunal (GSTAT).
+              With over <strong>24+ years of tax practice experience</strong> (since 2002) and dual qualifications in Commerce and Law (<strong>B.Com, LLB</strong>), I provide dedicated representation in complex <strong>GST litigation, GST audits, and GSTAT appeals</strong>. I represent corporate, commercial, and private clients <strong>across India</strong>—before Departmental Authorities, High Courts, and the GST Appellate Tribunal (GSTAT).
             </p>
 
             {/* Action buttons */}

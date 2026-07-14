@@ -39,7 +39,7 @@ export default function NoticeAssistant({ onSelectNotice }: NoticeAssistantProps
       description: 'Notice in Form ASMT-10 pointing out discrepancies in turnovers, tax rates, or returns scrutiny by departmental officers.',
       consequences: 'If unresolved, it leads to audit proceedings under Section 65 or demand notice under Section 73/74.',
       remedy: 'Replying within 30 days in Form ASMT-11, presenting clean ledger accounts, reconciliations, and explaining tax computations.',
-      dropdownSubject: 'GST Reply to Notice',
+      dropdownSubject: 'GST Notices and Replies',
       prefillMessage: 'Dear Advocate Yadav,\nI have received Form ASMT-10 Notice under Section 61 for Returns Scrutiny. I need professional assistance in drafting the Form ASMT-11 reply within the 30-day window.',
     },
     {
@@ -49,7 +49,7 @@ export default function NoticeAssistant({ onSelectNotice }: NoticeAssistantProps
       description: 'Ineligible credit disputes where the department blocks or demands reversal of credit claimed on motor vehicles, real estate construction inputs, or catering.',
       consequences: 'Sudden blocking of electronic credit ledgers and demand for recovery of used credits with interest.',
       remedy: 'Filing legal replies asserting eligibility exceptions (e.g. subcontractors, transport businesses) or filing a Writ Petition in High Court for arbitrary blocks.',
-      dropdownSubject: 'GST Appeals (HC/GSTAT)',
+      dropdownSubject: 'GST Appeals (Appellate authority & GSTAT)',
       prefillMessage: 'Dear Advocate Yadav,\nThe GST department has blocked my Electronic Credit Ledger claiming ineligible credit under Section 17(5). I need to appeal this block and file a legal representation.',
     },
     {
@@ -59,7 +59,7 @@ export default function NoticeAssistant({ onSelectNotice }: NoticeAssistantProps
       description: 'Departmental audit notifications demanding comprehensive books of accounts, or summons demanding presence of directors/proprietors.',
       consequences: 'High risk of demand escalation, seizure threats, and severe penal actions if statements are recorded incorrectly.',
       remedy: 'Pre-audit health checks to detect leaks, drafting legal replies to questionnaires, and representing directors during statement recording.',
-      dropdownSubject: 'GST Reply to Notice',
+      dropdownSubject: 'GST audit cases',
       prefillMessage: 'Dear Advocate Yadav,\nWe have received a GST Audit notice under Section 65 and a summon to produce accounting ledgers under Section 70. We request a pre-audit evaluation and defense counsel representation.',
     },
   ];

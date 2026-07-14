@@ -1,7 +1,7 @@
-# Adv. Shailendra Yadav — GST Litigation & Tax Consultant
+# Adv. Shailendra Yadav — TAX CONSULTANT & GST LITIGATION EXPERT
 
 Portfolio website for Advocate Shailendra Yadav, a GST litigation and tax
-consultant practising since 2009, representing clients across 8+ Indian states
+consultant practising since 2002, representing clients across India
 before Departmental Authorities, High Courts and the GST Appellate Tribunal
 (GSTAT).
 

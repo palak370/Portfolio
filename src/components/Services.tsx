@@ -1,7 +1,19 @@
-import { ClipboardCheck, FileSpreadsheet, Landmark, ShieldAlert } from 'lucide-react';
+import { ClipboardCheck, FileSpreadsheet, Landmark, ShieldAlert, FileText, Search, Truck } from 'lucide-react';
 
 export default function Services() {
   const serviceList = [
+    {
+      icon: <ShieldAlert size={20} style={{ color: 'var(--accent-gold)' }} />,
+      title: 'GST Notices and Replies',
+      description: 'Professional drafting of technical replies against Show Cause Notices (SCN), returns scrutiny under Section 61, mismatch notices (2A/2B vs 3B), and enforcement/inspection summons. Sound defense to block arbitrary demands.',
+      image: '/images/gst_reply_to_notices.jpg',
+    },
+    {
+      icon: <Landmark size={20} style={{ color: 'var(--accent-gold)' }} />,
+      title: 'GST Appeals (Appellate authority & GSTAT)',
+      description: 'Litigating disputes through all levels of appellate authorities. Expert drafting and oral arguments before First Appellate Authorities, GSTAT (GST Appellate Tribunal), and Writ Petitions before the hon\'ble high courts.',
+      image: '/images/gst_appeals.jpg',
+    },
     {
       icon: <ClipboardCheck size={20} style={{ color: 'var(--accent-gold)' }} />,
       title: 'GST Registration',
@@ -15,16 +27,22 @@ export default function Services() {
       image: '/images/gst_return_filing.jpg',
     },
     {
-      icon: <ShieldAlert size={20} style={{ color: 'var(--accent-gold)' }} />,
-      title: 'GST Reply to Notices',
-      description: 'Professional drafting of technical replies against Show Cause Notices (SCN), returns scrutiny under Section 61, mismatch notices (2A/2B vs 3B), and enforcement/inspection summons. Sound defense to block arbitrary demands.',
-      image: '/images/gst_reply_to_notices.jpg',
+      icon: <FileText size={20} style={{ color: 'var(--accent-gold)' }} />,
+      title: 'GST audit cases',
+      description: 'Comprehensive support and legal representation for GST audits conducted by department authorities. Preparing documentation, reconciliations, addressing audit queries, and resolving officer discrepancies.',
+      image: '/images/gst_audits.png',
     },
     {
-      icon: <Landmark size={20} style={{ color: 'var(--accent-gold)' }} />,
-      title: "GST Appeals (HC & GSTAT)",
-      description: 'Litigating disputes through all levels of appellate authorities. Expert drafting and oral arguments before First Appellate Authorities, GSTAT (GST Appellate Tribunal), and Writ Petitions before the High Courts.',
-      image: '/images/gst_appeals.jpg',
+      icon: <Search size={20} style={{ color: 'var(--accent-gold)' }} />,
+      title: 'GST Scrutiny',
+      description: 'Thorough analysis and response drafting for scrutiny of GST returns under Section 61. Rectifying discrepancies between GSTR-1, GSTR-3B, and GSTR-2B to mitigate penalties and ensure compliance.',
+      image: '/images/gst_scrutiny.png',
+    },
+    {
+      icon: <Truck size={20} style={{ color: 'var(--accent-gold)' }} />,
+      title: 'Vehicle detention (under section 68) cases',
+      description: 'Immediate legal assistance and representation for transit vehicle detention, seizure, and e-way bill penalty cases under Section 68. Swift drafting of replies to secure quick release of goods.',
+      image: '/images/vehicle_detention.png',
     },
   ];
 
