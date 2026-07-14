@@ -30,19 +30,19 @@ export default function Services() {
       icon: <FileText size={20} style={{ color: 'var(--accent-gold)' }} />,
       title: 'GST audit cases',
       description: 'Comprehensive support and legal representation for GST audits conducted by department authorities. Preparing documentation, reconciliations, addressing audit queries, and resolving officer discrepancies.',
-      image: '/images/gst_audits.png',
+      image: '/images/gst_audits.jpg',
     },
     {
       icon: <Search size={20} style={{ color: 'var(--accent-gold)' }} />,
       title: 'GST Scrutiny',
       description: 'Thorough analysis and response drafting for scrutiny of GST returns under Section 61. Rectifying discrepancies between GSTR-1, GSTR-3B, and GSTR-2B to mitigate penalties and ensure compliance.',
-      image: '/images/gst_scrutiny.png',
+      image: '/images/gst_scrutiny.jpg',
     },
     {
       icon: <Truck size={20} style={{ color: 'var(--accent-gold)' }} />,
       title: 'Vehicle detention (under section 68) cases',
       description: 'Immediate legal assistance and representation for transit vehicle detention, seizure, and e-way bill penalty cases under Section 68. Swift drafting of replies to secure quick release of goods.',
-      image: '/images/vehicle_detention.png',
+      image: '/images/vehicle_detention.jpg',
     },
   ];
 
