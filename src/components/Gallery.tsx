@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
-import { X, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, ChevronDown, Maximize2 } from 'lucide-react';
 
 interface GalleryItem {
   src: string;
-  category: 'Chamber' | 'Seminars';
+  category: 'Chamber' | 'Seminars' | 'Media';
   title: string;
   description: string;
 }
+
+/* Cards shown before the "View More" reveal */
+const INITIAL_VISIBLE = 9;
 
 export default function Gallery() {
   const galleryItems: GalleryItem[] = [
@@ -130,14 +133,66 @@ export default function Gallery() {
       title: 'S. Yadav & Co. Office Interior',
       description: 'Award-winning architectural layout of the main litigation chamber and corporate team desks.',
     },
+    {
+      src: 'gallery/g21.jpg',
+      category: 'Media',
+      title: 'Live Television Interview',
+      description: 'Adv. Yadav discussing GST and taxation developments in an exclusive live interview on High News.',
+    },
+    {
+      src: 'gallery/g22.jpg',
+      category: 'Media',
+      title: 'Tax Bar Association Appointment',
+      description: 'Dainik Bhaskar coverage of Adv. Yadav joining the executive committee of the M.P. Tax Law Bar Association.',
+    },
+    {
+      src: 'gallery/g23.jpg',
+      category: 'Media',
+      title: 'Crackdown on Fake GST Registrations',
+      description: 'Press report on the departmental campaign against fraudulent GST registrations, featuring Adv. Yadav.',
+    },
+    {
+      src: 'gallery/g24.jpg',
+      category: 'Media',
+      title: 'Union Budget Reaction',
+      description: 'Featured expert commentary: no fresh tax burden placed on the public in the Union Budget.',
+    },
+    {
+      src: 'gallery/g25.jpg',
+      category: 'Media',
+      title: 'Budget Analysis Feature',
+      description: 'Full-width newspaper analysis of the Union Budget with expert commentary by Adv. Yadav.',
+    },
+    {
+      src: 'gallery/g26.jpg',
+      category: 'Media',
+      title: 'On Regional Development & Jobs',
+      description: 'Quoted on employment prospects, improving connectivity, and the case for an investors\' summit in Datia.',
+    },
+    {
+      src: 'gallery/g27.jpg',
+      category: 'Media',
+      title: 'Income Tax Expectations',
+      description: 'Pre-budget expert opinion on income-tax relief, exemption limits, and standard deduction for taxpayers.',
+    },
   ];
 
-  const [activeFilter, setActiveFilter] = useState<'All' | 'Chamber' | 'Seminars'>('All');
+  const [activeFilter, setActiveFilter] = useState<'All' | 'Chamber' | 'Seminars' | 'Media'>('All');
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [showAll, setShowAll] = useState(false);
 
-  const filteredItems = activeFilter === 'All' 
-    ? galleryItems 
+  const filteredItems = activeFilter === 'All'
+    ? galleryItems
     : galleryItems.filter(item => item.category === activeFilter);
+
+  /* Collapse back to the initial set whenever the filter changes */
+  const selectFilter = (value: typeof activeFilter) => {
+    setActiveFilter(value);
+    setShowAll(false);
+  };
+
+  const visibleItems = showAll ? filteredItems : filteredItems.slice(0, INITIAL_VISIBLE);
+  const hiddenCount = filteredItems.length - visibleItems.length;
 
   const openLightbox = (src: string) => {
     const idx = galleryItems.findIndex(item => item.src === src);
@@ -193,13 +248,14 @@ export default function Gallery() {
           {[
             { label: 'All Media', value: 'All' },
             { label: 'Chambers & Library', value: 'Chamber' },
-            { label: 'Seminars & Events', value: 'Seminars' }
+            { label: 'Seminars & Events', value: 'Seminars' },
+            { label: 'Press & Media', value: 'Media' }
           ].map(btn => {
             const isActive = activeFilter === btn.value;
             return (
               <button
                 key={btn.value}
-                onClick={() => setActiveFilter(btn.value as any)}
+                onClick={() => selectFilter(btn.value as typeof activeFilter)}
                 style={{
                   padding: '0.65rem 1.5rem',
                   fontSize: '0.8rem',
@@ -239,10 +295,10 @@ export default function Gallery() {
           gridTemplateColumns: 'repeat(auto-fill, minmax(min(280px, 100%), 1fr))',
           gap: '2rem'
         }}>
-          {filteredItems.map((item) => (
+          {visibleItems.map((item, idx) => (
             <div
               key={item.src}
-              className="card glow-card"
+              className={`card glow-card ${showAll && idx >= INITIAL_VISIBLE ? 'gallery-reveal' : ''}`}
               onClick={() => openLightbox(item.src)}
               style={{
                 padding: '1rem',
@@ -250,7 +306,8 @@ export default function Gallery() {
                 display: 'flex',
                 flexDirection: 'column',
                 borderRadius: 'var(--border-radius)',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                animationDelay: showAll && idx >= INITIAL_VISIBLE ? `${Math.min((idx - INITIAL_VISIBLE) * 0.07, 0.8)}s` : undefined
               }}
             >
               {/* Image Container */}
@@ -308,7 +365,7 @@ export default function Gallery() {
                     fontWeight: 700,
                     color: 'var(--accent-gold)'
                   }}>
-                    {item.category === 'Chamber' ? 'Chamber & Library' : 'Seminar / Event'}
+                    {item.category === 'Chamber' ? 'Chamber & Library' : item.category === 'Media' ? 'Press & Media' : 'Seminar / Event'}
                   </span>
                 </div>
                 <h3 style={{
@@ -331,7 +388,35 @@ export default function Gallery() {
             </div>
           ))}
         </div>
+
+        {/* View More — reveals the remaining photographs */}
+        {hiddenCount > 0 && (
+          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '3rem' }}>
+            <button
+              onClick={() => setShowAll(true)}
+              className="btn btn-secondary"
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem' }}
+            >
+              <span>View More ({hiddenCount})</span>
+              <ChevronDown size={16} />
+            </button>
+          </div>
+        )}
       </div>
+
+      <style>{`
+        .gallery-reveal {
+          opacity: 0;
+          animation: galleryFadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        @keyframes galleryFadeUp {
+          from { opacity: 0; transform: translateY(18px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .gallery-reveal { animation: none; opacity: 1; }
+        }
+      `}</style>
 
       {/* Custom Lightbox Modal */}
       {lightboxIndex !== null && (
