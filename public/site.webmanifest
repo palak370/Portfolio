@@ -1,0 +1,13 @@
+{
+  "name": "Adv. Shailendra Yadav — Tax Consultant & GST Litigation Expert",
+  "short_name": "Adv. S. Yadav",
+  "description": "Tax consultant and GST litigation expert practising since 2002 — High Courts, GSTAT and Departmental Authorities, across India.",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#171006",
+  "background_color": "#fbfaf7",
+  "display": "browser",
+  "start_url": "/"
+}
